@@ -16,6 +16,6 @@
           alert("User liked this page!");
       });
     </script>
-    <fb:like href="http://local.any/like.php"></fb:like>
+    <fb:like href="http://<?= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"] ?>"></fb:like>
   </body>
 </html>
