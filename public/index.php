@@ -39,6 +39,7 @@
       <p>
         <!--<a href="#" onclick="return fbConnect();">Login</a>-->
         <fb:login-button perms="read_stream,publish_stream,offline_access,email"></fb:login-button>
+        
       </p>
     <?php } ?>
   </body>
