@@ -17,12 +17,12 @@
             // A user has logged in, and a new cookie has been saved
             
             // Option 1: Cookie
-            //document.location.href = '/?action=connect';
+            document.location.href = '/?action=connect';
             
             // Option2: Session in Request
-            $.post("/?action=connect", {session: $.toJSON(response.session)}, function() {
-              document.location.href = '/';
-            });
+            //$.post("/?action=connect", {session: $.toJSON(response.session)}, function() {
+            //  document.location.href = '/';
+            //});
             
           } else {
             // The user has logged out, and the cookie has been cleared
@@ -38,7 +38,7 @@
       <h1>Hi there, Stranger!</h1>
       <p>
         <!--<a href="#" onclick="return fbConnect();">Login</a>-->
-        <fb:login-button perms="read_stream,publish_stream,offline_access,email"></fb:login-button>
+        <fb:login-button perms="read_stream,publish_stream,offline_access,email,rsvp_event"></fb:login-button>
         
       </p>
     <?php } ?>

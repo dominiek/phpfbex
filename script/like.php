@@ -21,9 +21,6 @@
       return $facebook->api('/'.$postId.'/likes', 'post', $streamObject);
     } catch (FacebookApiException $e) {
       error_log($e);
-      if($e->getType() == 'OAuthException') {
-        echo "Session needs to be deactivated\n";
-      }
       exit("Oops, we received a Facebook API Error.");
     }
   }
