@@ -2,9 +2,13 @@
 
   require_once("../application.php");
 
+  /**
+   * One remaining issue is figuring out the 'pid' (picture id), that the Old REST API wants
+   * As far as I know, you can NOT get this from the Graph API.
+   */
 
   /**
-   * User can be a user id or the part of a name.
+   * User can be a user id or a name (will not auto-link to user)
    * X and Y are NOT pixel coordinates, they are relative percentages.
    */
   function fbTagPhoto($fb_uid, $photo_id, $user, $percentage_x, $percentage_y) {
@@ -37,11 +41,8 @@
       exit("Oops, we received a Facebook API Error.");
     }
   }
-  //493551060451
-  //7048923
-  //687215451
-  //2951567887357939419
-  $result = fbTagPhoto(687215451, "2951567887357939419", "Arjan Scherpenisse", 50, 50);
+  
+  $result = fbTagPhoto(687215451, "2951567887357939419", 687215451, 50, 50);
   print_r($result);
   
 ?>
